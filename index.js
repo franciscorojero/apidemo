@@ -17,6 +17,11 @@ app.get('/mensaje2', (req, res) => {
   res.send('Mensaje 2: tu API ya funciona 😊');
 });
 
+// Ruta 4
+app.get('/saludar/:msg', (req, res) => {
+  res.send(`Hola: ${req.params.msg} 😊`);
+});
+
 // Iniciar servidor
 app.listen(port, () => {
   console.log(`Servidor corriendo en http://localhost:${port}`);
